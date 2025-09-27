@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url(ferocious-tiger-studio.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+header {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background: #ffffff1c;
+}
+
+nav {
+    width:90%;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+}
+
+.logo a {
+    font-family: sans-serif;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 700;
+    color: #52ff2f;
+}
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    height: 77px;
+}
+
+.navbar ul li a {
+    height: 100%;
+    padding: 0 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s ease-in-out;
+    &:hover {
+        background-color: #ffffff3e;
+    }
+}
+
+.toggle-btn {
+    display: none;
+}
+.toggle-btn .bars {
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+}
+.open .bar {
+    width: 25px;
+    height: 2px;
+    margin: 5px 0;
+    display: block;
+    background-color: #ffffff;
+}
+
+.close .closes {
+    width: 25px;
+    height: 2px;
+    margin: 5px 0;
+    display: block;
+    background-color: #ffffff;
+}
+
+.close .closes:nth-child(2) {
+    opacity: 0;
+}
+
+.close .closes:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.close .closes:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.d-block {
+    display: block;
+}
+/* Media */
+@media (max-width: 850px) {
+    header {
+        height: 77px;
+    }
+    .toggle-btn {
+    display: block;
+}
+
+.navbar {
+    justify-content: space-between;
+}
+.navbar ul {
+    width: 320px;
+    height: 100vh;
+    position: fixed;
+    top: 77px;
+    right: 0;
+    flex-direction: column;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    background: #ffffff1c;
+    box-shadow: 0 5px 15px #000000b0;
+    animation: fadeIn .3s linear 1 forwards;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+.d-none {
+    display: none !important;
+}
+}
+@media (max-width: 520px) {
+    .navbar ul {
+        width: 100%;
+    }
+}
+/* Media */
